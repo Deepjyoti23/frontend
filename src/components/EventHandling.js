@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Toaster, toast } from 'react-hot-toast';
 
 const EventHandling = () => {
 	
@@ -16,11 +17,13 @@ const EventHandling = () => {
 		setUpvotes(upvotes+1); //✅ right
 	}
 
+	const notify = () => toast('Here is your toast.');
+
 	return (
 	<div style={{backgroundColor: mycolor, height:'100vh', padding:50}}>
 		<h1>Event Handling </h1>
 		<hr />
-		<button className='btn btn-primary' onClick={() =>alert('Knock Knock!!👌👌')}>Click Event Handling</button>
+		<button className='btn btn-primary' onClick={() => alert('Knock Knock!!👌👌')}>Click Event Handling</button>
 		<br />
 		<br />
 		{/* <input type="text" onChange={(e) => {console.log(e.target.value)}} /> */}
@@ -37,6 +40,9 @@ const EventHandling = () => {
 		<h1>🔼{upvotes}</h1>
 
 		<input type="range" className='form-range' id='customRange1' onChange={(e) => {console.log(e.target.value);}} />
+
+		<button onClick={notify}>Make me a toast</button>
+      <Toaster />
 
 	</div>
 	)

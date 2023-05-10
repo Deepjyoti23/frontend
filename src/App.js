@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import EventHandling from './components/EventHandling';
 import Profile from './components/Profile';
+import { UserManager } from './components/UserManager';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='Signup' element={<Signup />  } />
           <Route path='event' element={<EventHandling  />  } />
           <Route path='profile' element={<Profile />  } />
+          <Route path='manager' element={<UserManager />  } />
           
 
         </Routes>
